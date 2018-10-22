@@ -30,6 +30,7 @@ everest: $(DEFAULT_GOAL) $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) $(SHA256) $(LINEAGE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(LINEAGE_TARGET_PACKAGE).sha256sum
 	$(hide) rm -rf $(call intermediates-dir-for,PACKAGING,target_files)
 	$(hide) ./vendor/lineage/build/tasks/ascii_output.sh
+	$(hide) ./vendor/lineage/tools/generate_json_build_info.sh $(LINEAGE_TARGET_PACKAGE)
 	echo -e ${CL_BLD}${CL_RED}"===============================-Package complete-==============================="${CL_RED}
 	echo -e ${CL_BLD}${CL_GRN}"Zip: "${CL_RED} $(LINEAGE_TARGET_PACKAGE)${CL_RST}
 	echo -e ${CL_BLD}${CL_GRN}"SHA256: "${CL_RED}" `cat $(LINEAGE_TARGET_PACKAGE).sha256sum | awk '{print $$1}' `"${CL_RST}
