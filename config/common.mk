@@ -117,6 +117,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/everest/prebuilt/common/etc/sysconfig/preinstalled-packages-platform-everest-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preins>
 
+# Everest-specific init rc file
+PRODUCT_COPY_FILES += \
+    vendor/everest/prebuilt/common/etc/init/init.everest-system_ext.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.everest-system_ext.rc
+
 # Include addons
 include vendor/addons/config.mk
 
