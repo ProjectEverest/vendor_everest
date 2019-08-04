@@ -117,6 +117,10 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
 
+# Everest-specific init rc file
+PRODUCT_COPY_FILES += \
+    vendor/everest/prebuilt/common/etc/init/init.everest-system_ext.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.everest-system_ext.rc
+
 #Themes OVerlay
 include packages/overlays/Themes/themes.mk
 
