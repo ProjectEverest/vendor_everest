@@ -101,3 +101,7 @@ PRODUCT_PACKAGES += \
 # repainter
 PRODUCT_PACKAGES += \
     RepainterServicePriv
+
+# TouchGestures
+PRODUCT_PACKAGES += \
+    TouchGestures
