@@ -35,6 +35,6 @@ everest: $(DEFAULT_GOAL) $(INTERNAL_OTA_PACKAGE_TARGET)
 	echo -e ${CL_BLD}${CL_GRN}"Zip: "${CL_RED} $(LINEAGE_TARGET_PACKAGE)${CL_RST}
 	echo -e ${CL_BLD}${CL_GRN}"SHA256: "${CL_RED}" `cat $(LINEAGE_TARGET_PACKAGE).sha256sum | awk '{print $$1}' `"${CL_RST}
 	echo -e ${CL_BLD}${CL_GRN}"Size:"${CL_RED}" `du -sh $(LINEAGE_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
-	echo -e ${CL_BLD}${CL_GRN}"TimeStamp:"${CL_RED}" `cat $(PRODUCT_OUT)/system/build.prop | grep ro.build.date.utc | cut -d'=' -f2 | awk '{print $$1}' `"${CL_RST}
-	echo -e ${CL_BLD}${CL_GRN}"Integer Value:"${CL_RED}" `wc -c $(LINEAGE_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
+        echo -e ${CL_BLD}${CL_GRN}"ID:"${CL_RED}" `md5sum $(LINEAGE_TARGET_PACKAGE) | cut -d ' ' -f 1`"${CL_RST}
+	echo -e ${CL_BLD}${CL_GRN}"Path:"${CL_RED}" `wc -c $(LINEAGE_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
 	echo -e ${CL_BLD}${CL_RED}"================================================================================"${CL_RED}
