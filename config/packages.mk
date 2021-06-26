@@ -100,6 +100,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GameSpace
 
+# Hide nav Overlays
+PRODUCT_PACKAGES += \
+    NavigationBarNoHintOverlay
+
 # repainter
 PRODUCT_PACKAGES += \
     RepainterServicePriv
