@@ -1,10 +1,7 @@
 #!/bin/bash
 CL_RED="\033[31m"
-CL_GRN="\033[1;32m"
-CL_BLU="\033[34m"
 CL_CYN="\033[1;36m"
-CL_RST="\033[0m"
-CL_YLW="\033[1;33m"
+CL_PRP="\033[35m"
 CL_NC="\033[0m"
 if [ "$1" ]; then
     echo "Generating .json"
@@ -15,10 +12,10 @@ if [ "$1" ]; then
         # only generate for OFFICIAL builds. unless forced with 'export FORCE_JSON=1'
         if [[ $file_name == *"OFFICIAL"* ]] || [[ $FORCE_JSON == 1 ]]; then
             if [[ $FORCE_JSON == 1 ]]; then
-                echo -e "${CL_GRN}Forced generation of json${CL_NC}"
+                echo -e "${CL_CYN}Forced generation of json${CL_NC}"
             fi
             file_size=$(stat -c%s $file_path)
-            md5=$(cat "$file_path.md5sum" | cut -d' ' -f1)
+            md5=$(md5sum $file_path | awk '{ print $1 }');
             datetime=$(grep ro\.build\.date\.utc ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
             id=$(sha256sum $file_path | awk '{ print $1 }');
             build_type=$(grep ro\.everest\.buildtype ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
@@ -38,10 +35,10 @@ if [ "$1" ]; then
             echo "    }" >> $file_path.json
             echo "  ]" >> $file_path.json
             echo "}" >> $file_path.json
-            mv "${file_path}.json" "./out/target/product/$DEVICE/${DEVICE}.json"
-            echo -e "${CL_GRN}Done generating ${CL_RED}${DEVICE}.json${CL_NC}"
+            mv "${file_path}.json" "./${DEVICE}.json"
+            echo -e "${CL_CYN}Done generating ${CL_PRP}${DEVICE}.json${CL_NC}"
         else
-            echo -e "${CL_YLW}Skipped generating json for a non-official build${CL_NC}"
+            echo -e "${CL_RED}Skipped generating json for a non-official build${CL_NC}"
         fi
     fi
 fi
