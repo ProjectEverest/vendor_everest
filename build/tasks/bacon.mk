@@ -20,19 +20,18 @@ EVEREST_TARGET_PACKAGE := $(PRODUCT_OUT)/Everest-$(EVEREST_VERSION).zip
 
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
+CL_CYN="\033[36m"
 CL_PRP="\033[35m"
-CL_RED="\033[31m"
-CL_GRN="\033[32m"
 
 .PHONY: bacon
 bacon: $(DEFAULT_GOAL) $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(EVEREST_TARGET_PACKAGE)
 	$(hide) $(SHA256) $(EVEREST_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(EVEREST_TARGET_PACKAGE).sha256sum
 	$(hide) ./vendor/everest/tools/generate_json_build_info.sh $(EVEREST_TARGET_PACKAGE)
-	echo -e ${CL_BLD}${CL_RED}"===============================-Package complete-==============================="${CL_RED}
-	echo -e ${CL_BLD}${CL_GRN}"Zip: "${CL_RED} $(EVEREST_TARGET_PACKAGE)${CL_RST}
-	echo -e ${CL_BLD}${CL_GRN}"SHA256: "${CL_RED}" `cat $(EVEREST_TARGET_PACKAGE).sha256sum | awk '{print $$1}' `"${CL_RST}
-	echo -e ${CL_BLD}${CL_GRN}"Size:"${CL_RED}" `du -sh $(EVEREST_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
-	echo -e ${CL_BLD}${CL_GRN}"ID:"${CL_RED}" `md5sum $(EVEREST_TARGET_PACKAGE) | cut -d ' ' -f 1`"${CL_RST}
-	echo -e ${CL_BLD}${CL_GRN}"Path:"${CL_RED}" $(EVEREST_TARGET_PACKAGE)"${CL_RST}
-	echo -e ${CL_BLD}${CL_RED}"================================================================================"${CL_RED}
+	echo -e ${CL_BLD}${CL_CYN}"===============================-Package complete-==============================="${CL_CYN}
+	echo -e ${CL_BLD}${CL_CYN}"Datetime :"${CL_PRP}" `cat $(PRODUCT_OUT)/system/build.prop | grep ro.build.date.utc | cut -d'=' -f2 | awk '{print $$1}' `"${CL_RST}
+	echo -e ${CL_BLD}${CL_CYN}"Size:"${CL_PRP}" `du -sh $(EVEREST_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
+	echo -e ${CL_BLD}${CL_CYN}"Filehash: "${CL_PRP}" `md5sum $(EVEREST_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
+	echo -e ${CL_BLD}${CL_CYN}"Filename: "${CL_PRP} $(EVEREST_TARGET_PACKAGE)${CL_RST}
+	echo -e ${CL_BLD}${CL_CYN}"ID: "${CL_PRP}" `cat $(EVEREST_TARGET_PACKAGE).sha256sum | awk '{print $$1}' `"${CL_RST}
+	echo -e ${CL_BLD}${CL_CYN}"================================================================================"${CL_CYN}
