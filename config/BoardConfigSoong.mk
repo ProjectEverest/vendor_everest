@@ -32,6 +32,7 @@ SOONG_CONFIG_everestGlobalVars += \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
     camera_needs_client_info \
+    camera_needs_client_info_lib \
     camera_override_format_from_reserved \
     disable_bluetooth_le_read_buffer_size_v2 \
     disable_bluetooth_le_set_host_feature \
@@ -91,6 +92,8 @@ SOONG_CONFIG_everestGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAME
 SOONG_CONFIG_everestGlobalVars_camera_needs_client_info_lib_oplus := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB_OPLUS)
 SOONG_CONFIG_everestGlobalVars_uses_legacy_fd_fbdev := $(TARGET_USES_LEGACY_FD_FBDEV)
 SOONG_CONFIG_everestGlobalVars_target_alternative_futex_waiters := $(TARGET_ALTERNATIVE_FUTEX_WAITERS)
+SOONG_CONFIG_everestGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
+SOONG_CONFIG_everestGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
@@ -130,7 +133,6 @@ SOONG_CONFIG_everestGlobalVars_target_trust_usb_control_path := $(TARGET_TRUST_U
 SOONG_CONFIG_everestGlobalVars_target_trust_usb_control_enable := $(TARGET_TRUST_USB_CONTROL_ENABLE)
 SOONG_CONFIG_everestGlobalVars_target_trust_usb_control_disable := $(TARGET_TRUST_USB_CONTROL_DISABLE)
 SOONG_CONFIG_everestGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
-SOONG_CONFIG_everestGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
 SOONG_CONFIG_everestGlobalVars_disable_bluetooth_le_read_buffer_size_v2 := $(TARGET_DISABLE_BLUETOOTH_LE_READ_BUFFER_SIZE_V2)
 SOONG_CONFIG_everestGlobalVars_disable_bluetooth_le_set_host_feature := $(TARGET_DISABLE_BLUETOOTH_LE_SET_HOST_FEATURE)
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
