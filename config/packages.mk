@@ -95,3 +95,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     DocumentsUIOverlay \
     NetworkStackOverlay
+
+# repainter
+PRODUCT_PACKAGES += \
+    RepainterServicePriv
