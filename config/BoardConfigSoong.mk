@@ -51,6 +51,7 @@ SOONG_CONFIG_everestGlobalVars += \
     target_trust_usb_control_enable \
     target_trust_usb_control_disable \
     uses_egl_display_array \
+    uses_legacy_fd_fbdev \
     uses_nothing_camera \
     uses_oplus_camera
 
@@ -85,6 +86,7 @@ SOONG_CONFIG_everestQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_P
 SOONG_CONFIG_everestGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
 SOONG_CONFIG_everestGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 SOONG_CONFIG_everestGlobalVars_camera_needs_client_info_lib_oplus := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB_OPLUS)
+SOONG_CONFIG_everestGlobalVars_uses_legacy_fd_fbdev := $(TARGET_USES_LEGACY_FD_FBDEV)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
