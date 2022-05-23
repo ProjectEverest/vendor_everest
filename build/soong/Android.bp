@@ -533,3 +533,20 @@ camera_needs_client_info_lib_oplus {
         },
     },
 }
+
+soong_config_module_type {
+    name: "uses_legacy_fd_fbdev",
+    module_type: "cc_defaults",
+    config_namespace: "everestGlobalVars",
+    bool_variables: ["uses_legacy_fd_fbdev"],
+    properties: ["cppflags"],
+}
+
+uses_legacy_fd_fbdev {
+    name: "uses_legacy_fd_fbdev_defaults",
+    soong_config_variables: {
+        uses_legacy_fd_fbdev: {
+            cppflags: ["-DUSES_LEGACY_FD_FBDEV"],
+        },
+    },
+}
