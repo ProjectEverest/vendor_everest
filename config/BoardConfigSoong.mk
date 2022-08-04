@@ -37,6 +37,7 @@ SOONG_CONFIG_everestGlobalVars += \
     gralloc_handle_has_reserved_size \
     sdmcore_has_is_display_hw_available_func \
     needs_camera_boottime \
+    target_alternative_futex_waiters \
     target_health_charging_control_charging_path \
     target_health_charging_control_charging_enabled \
     target_health_charging_control_charging_disabled \
@@ -87,6 +88,7 @@ SOONG_CONFIG_everestGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
 SOONG_CONFIG_everestGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 SOONG_CONFIG_everestGlobalVars_camera_needs_client_info_lib_oplus := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB_OPLUS)
 SOONG_CONFIG_everestGlobalVars_uses_legacy_fd_fbdev := $(TARGET_USES_LEGACY_FD_FBDEV)
+SOONG_CONFIG_everestGlobalVars_target_alternative_futex_waiters := $(TARGET_ALTERNATIVE_FUTEX_WAITERS)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
@@ -109,6 +111,7 @@ TARGET_TRUST_USB_CONTROL_ENABLE ?= 1
 TARGET_TRUST_USB_CONTROL_DISABLE ?= 0
 
 # Soong value variables
+<<<<<<< HEAD
 SOONG_CONFIG_everestGlobalVars_aapt_version_code := $(shell date -u +%Y%m%d)
 SOONG_CONFIG_everestGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
 SOONG_CONFIG_everestGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_OFFSET)
