@@ -103,6 +103,10 @@ PRODUCT_PACKAGES += \
     NetworkStackOverlay \
     ThemedIconsOverlay
 
+# BatteryStatsViewer
+PRODUCT_PACKAGES += \
+    BatteryStatsViewer
+
 # BtHelper
 PRODUCT_PACKAGES += \
     BtHelper
