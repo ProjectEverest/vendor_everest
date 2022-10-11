@@ -92,6 +92,10 @@ PRODUCT_PACKAGES += \
     DocumentsUIOverlay \
     NetworkStackOverlay
 
+# BatteryStatsViewer
+PRODUCT_PACKAGES += \
+    BatteryStatsViewer
+
 # BtHelper
 PRODUCT_PACKAGES += \
     BtHelper
