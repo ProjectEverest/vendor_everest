@@ -97,6 +97,10 @@ PRODUCT_PACKAGES += \
     NetworkStackOverlay \
     ThemedIconsOverlay
 
+# BtHelper
+PRODUCT_PACKAGES += \
+    BtHelper
+
 # repainter
 PRODUCT_PACKAGES += \
     RepainterServicePriv
