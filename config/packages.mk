@@ -96,6 +96,10 @@ PRODUCT_PACKAGES += \
     DocumentsUIOverlay \
     NetworkStackOverlay
 
+# BtHelper
+PRODUCT_PACKAGES += \
+    BtHelper
+
 # repainter
 PRODUCT_PACKAGES += \
     RepainterServicePriv
