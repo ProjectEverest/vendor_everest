@@ -111,7 +111,6 @@ TARGET_TRUST_USB_CONTROL_ENABLE ?= 1
 TARGET_TRUST_USB_CONTROL_DISABLE ?= 0
 
 # Soong value variables
-<<<<<<< HEAD
 SOONG_CONFIG_everestGlobalVars_aapt_version_code := $(shell date -u +%Y%m%d)
 SOONG_CONFIG_everestGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
 SOONG_CONFIG_everestGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_OFFSET)
