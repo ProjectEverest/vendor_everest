@@ -56,6 +56,13 @@ endif
 PRODUCT_PACKAGES += \
     Launcher3QuickStep
 
+# Blur Support
+ifeq ($(TARGET_SUPPORTS_BLUR),true)
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.sf.blurs_are_expensive=1 \
+    ro.surface_flinger.supports_background_blur=1
+endif
+
 # Launchers overlay
 PRODUCT_PACKAGES += \
     AndroidOverlay
