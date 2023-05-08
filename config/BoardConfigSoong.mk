@@ -59,7 +59,8 @@ SOONG_CONFIG_everestGlobalVars += \
     uses_legacy_fd_fbdev \
     uses_miui_camera \
     uses_nothing_camera \
-    uses_oplus_camera
+    uses_oplus_camera \
+    uses_oppo_camera
 
 SOONG_CONFIG_NAMESPACES += everestNvidiaVars
 SOONG_CONFIG_everestNvidiaVars += \
@@ -97,6 +98,7 @@ SOONG_CONFIG_everestGlobalVars_target_alternative_futex_waiters := $(TARGET_ALTE
 SOONG_CONFIG_everestGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
 SOONG_CONFIG_everestGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
 SOONG_CONFIG_everestGlobalVars_uses_miui_camera := $(TARGET_USES_MIUI_CAMERA)
+SOONG_CONFIG_everestGlobalVars_uses_oppo_camera := $(TARGET_USES_OPPO_CAMERA)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
