@@ -39,6 +39,7 @@ SOONG_CONFIG_everestGlobalVars += \
     gralloc_handle_has_custom_content_md_reserved_size \
     gralloc_handle_has_reserved_size \
     sdmcore_has_is_display_hw_available_func \
+    include_miui_camera \
     needs_camera_boottime \
     target_alternative_futex_waiters \
     target_health_charging_control_charging_path \
@@ -99,6 +100,7 @@ SOONG_CONFIG_everestGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS
 SOONG_CONFIG_everestGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
 SOONG_CONFIG_everestGlobalVars_uses_miui_camera := $(TARGET_USES_MIUI_CAMERA)
 SOONG_CONFIG_everestGlobalVars_uses_oppo_camera := $(TARGET_USES_OPPO_CAMERA)
+SOONG_CONFIG_everestGlobalVars_include_miui_camera := $(TARGET_INCLUDES_MIUI_CAMERA)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
