@@ -16,10 +16,6 @@
 PRODUCT_PACKAGES += \
     EverestWallpaperStub
 
-# Config
-PRODUCT_PACKAGES += \
-    SimpleDeviceConfig
-
 # Extra tools in Everest
 PRODUCT_PACKAGES += \
     bash \
