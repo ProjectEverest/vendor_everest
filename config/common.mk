@@ -271,3 +271,4 @@ include vendor/lineage/config/version.mk
 
 # EverestOS
 $(call inherit-product, vendor/lineage/config/everest.mk)
+include packages/overlays/Themes/themes.mk
