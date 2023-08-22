@@ -100,6 +100,9 @@ PRODUCT_PACKAGES += \
     product_charger_res_images \
     product_charger_res_images_vendor
 
+# Include addons
+include vendor/addons/config.mk
+
 # Include Everest Branding
 include vendor/everest/config/branding.mk
 
