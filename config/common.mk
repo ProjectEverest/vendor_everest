@@ -111,6 +111,9 @@ PRODUCT_PACKAGES += \
     product_charger_res_images \
     product_charger_res_images_vendor
 
+#Themes OVerlay
+include packages/overlays/Themes/themes.mk
+
 # Include Everest Versioning
 include vendor/everest/config/version.mk
 
