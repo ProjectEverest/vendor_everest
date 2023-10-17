@@ -34,6 +34,7 @@ SOONG_CONFIG_everestGlobalVars += \
     camera_needs_client_info \
     camera_needs_client_info_lib \
     camera_override_format_from_reserved \
+    target_camera_package_name \
     disable_bluetooth_le_read_buffer_size_v2 \
     disable_bluetooth_le_set_host_feature \
     gralloc_handle_has_custom_content_md_reserved_size \
@@ -58,10 +59,7 @@ SOONG_CONFIG_everestGlobalVars += \
     target_trust_usb_control_disable \
     uses_egl_display_array \
     uses_legacy_fd_fbdev \
-    uses_miui_camera \
-    uses_nothing_camera \
-    uses_oplus_camera \
-    uses_oppo_camera
+    uses_miui_camera
 
 SOONG_CONFIG_NAMESPACES += everestNvidiaVars
 SOONG_CONFIG_everestNvidiaVars += \
@@ -91,16 +89,14 @@ SOONG_CONFIG_everestNvidiaVars_uses_nvidia_enhancements := $(NV_ANDROID_FRAMEWOR
 SOONG_CONFIG_everestQcomVars_qti_vibrator_use_effect_stream := $(TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM)
 SOONG_CONFIG_everestQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_everestQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
-SOONG_CONFIG_everestGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
-SOONG_CONFIG_everestGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 SOONG_CONFIG_everestGlobalVars_camera_needs_client_info_lib_oplus := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB_OPLUS)
 SOONG_CONFIG_everestGlobalVars_uses_legacy_fd_fbdev := $(TARGET_USES_LEGACY_FD_FBDEV)
 SOONG_CONFIG_everestGlobalVars_target_alternative_futex_waiters := $(TARGET_ALTERNATIVE_FUTEX_WAITERS)
 SOONG_CONFIG_everestGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
 SOONG_CONFIG_everestGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
 SOONG_CONFIG_everestGlobalVars_uses_miui_camera := $(TARGET_USES_MIUI_CAMERA)
-SOONG_CONFIG_everestGlobalVars_uses_oppo_camera := $(TARGET_USES_OPPO_CAMERA)
 SOONG_CONFIG_everestGlobalVars_include_miui_camera := $(TARGET_INCLUDES_MIUI_CAMERA)
+SOONG_CONFIG_everestGlobalVars_target_camera_package_name := $(TARGET_CAMERA_PACKAGE_NAME)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
