@@ -133,4 +133,7 @@ include vendor/everest/config/packages.mk
 # Include everest_props
 $(call inherit-product, vendor/everest/config/everest_props.mk)
 
+#pixel fw
+$(call inherit-product-if-exists, vendor/pixel-framework/config.mk)
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
