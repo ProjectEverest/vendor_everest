@@ -96,6 +96,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     BtHelper
 
+# GameSpace
+PRODUCT_PACKAGES += \
+    GameSpace
+
 # repainter
 PRODUCT_PACKAGES += \
     RepainterServicePriv
