@@ -130,6 +130,9 @@ PRODUCT_PACKAGES += \
     product_charger_res_images \
     product_charger_res_images_vendor
 
+PRODUCT_COPY_FILES += \
+    vendor/everest/overlay/rro_packages/partition_order.xml:$(TARGET_COPY_OUT_PRODUCT)/overlay/partition_order.xml
+
 #Themes OVerlay
 include packages/overlays/Themes/themes.mk
 
