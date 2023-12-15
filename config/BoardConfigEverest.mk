@@ -11,3 +11,6 @@ ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
 endif
 
 include vendor/everest/config/BoardConfigSoong.mk
+
+# Certification
+include vendor/certification/BoardConfig.mk
