@@ -113,6 +113,10 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
 
+# Cloned app exemption
+PRODUCT_COPY_FILES += \
+    vendor/everest/prebuilt/common/etc/sysconfig/preinstalled-packages-platform-everest-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preins>
+
 # Include addons
 include vendor/addons/config.mk
 
