@@ -94,6 +94,9 @@ SYSTEMUI_OPTIMIZE_JAVA ?= true
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
+# Audio
+include vendor/everest/audio/audio.mk
+
 # Bootanimation
 include vendor/everest/config/bootanimation.mk
 
