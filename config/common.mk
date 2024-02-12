@@ -109,6 +109,9 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 # Bootanimation
 include vendor/everest/config/bootanimation.mk
 
+# Relax Broken Library Check
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+
 # Call Recording
 TARGET_CALL_RECORDING_SUPPORTED ?= true
 ifneq ($(TARGET_CALL_RECORDING_SUPPORTED),false)
