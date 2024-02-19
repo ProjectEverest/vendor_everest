@@ -15,7 +15,8 @@
 # Everest packages
 PRODUCT_PACKAGES += \
     EverestWallpaperStub \
-    Glimpse
+    Glimpse \
+    OmniStyle
 
 # Extra tools in Everest
 PRODUCT_PACKAGES += \
