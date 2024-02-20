@@ -55,4 +55,5 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.everest.display.version=$(EVEREST_DISPLAY_VERSION) \
     ro.everest.fingerprint=$(ROM_FINGERPRINT) \
     ro.everest.version=$(EVEREST_VERSION) \
-    ro.modversion=$(EVEREST_VERSION)
+    ro.modversion=$(EVEREST_VERSION) \
+    ro.everestos.maintainer=$(EVEREST_MAINTAINER)
