@@ -63,7 +63,10 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Gapps
+WITH_GAPPS ?= true
+ifeq ($(WITH_GAPPS),true)
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+endif
 
 # Gboard side padding
 PRODUCT_PRODUCT_PROPERTIES += \
