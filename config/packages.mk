@@ -113,10 +113,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     BtHelper
 
-# GameSpace
-PRODUCT_PACKAGES += \
-    GameSpace
-
 # Hide nav Overlays
 PRODUCT_PACKAGES += \
     NavigationBarNoHintOverlay
