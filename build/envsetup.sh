@@ -934,7 +934,7 @@ alias cmkap='dopush cmka'
 
 function repopick() {
     T=$(gettop)
-    $T/vendor/everest/build/tools/repopick.py $@
+    python3 $T/vendor/everest/build/tools/repopick.py $@
 }
 
 function sort-blobs-list() {
