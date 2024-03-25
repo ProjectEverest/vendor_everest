@@ -14,8 +14,7 @@
 
 # Everest packages
 PRODUCT_PACKAGES += \
-    EverestWallpaperStub \
-    OmniStyle
+    EverestWallpaperStub
 
 # Face Unlock
 PRODUCT_PACKAGES += \
