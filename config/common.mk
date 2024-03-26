@@ -124,7 +124,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/everest/prebuilt/common/etc/init/init.everest-system_ext.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.everest-system_ext.rc
 
-#Themes OVerlay
+# Lawnchair
+ifneq ($(TARGET_USES_LAWNCHAIR), true)
+PRODUCT_COPY_FILES += \
+   $(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
+endif
+
+# Themes OVerlay
 include packages/overlays/Themes/themes.mk
 
 # Include Everest Branding
