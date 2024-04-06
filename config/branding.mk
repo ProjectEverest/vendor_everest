@@ -1,6 +1,4 @@
-# Copyright (C) 2016-2017 AOSiP
-# Copyright (C) 2020 Fluid
-# Copyright (C) 2021 EverestOS
+# Copyright (C) 2024 EverestOS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -42,6 +40,38 @@ else
 EVEREST_EDITION := Vanilla
 endif
 
+# OFFICIAL DEVICES CHECK
+OFFICIAL_MAINTAINERS := $(shell cat everest-maintainers/everest.maintainers)
+OFFICIAL_DEVICES := $(shell cat everest-maintainers/everest.devices)
+
+ifeq ($(findstring $(EVEREST_BUILD), $(OFFICIAL_DEVICES)),)
+  # Device not listed as official
+  EVEREST_BUILD_TYPE := UNOFFICIAL
+else
+  # Check if builder is an official maintainer
+  ifeq ($(findstring $(EVEREST_MAINTAINER), $(OFFICIAL_MAINTAINERS)),)
+    # Builder not an official maintainer, warn and set unofficial
+    $(warning **********************************************************************)
+    $(warning *   There is already an official maintainer for $(EVEREST_BUILD)    *)
+    $(warning *              Setting build type to UNOFFICIAL                      *)
+    $(warning **********************************************************************)
+    EVEREST_BUILD_TYPE := UNOFFICIAL
+  else
+    # Official maintainer building official device
+    EVEREST_BUILD_TYPE := OFFICIAL
+  endif
+endif
+
+# Enforce official build for official maintainers on official devices
+ifeq ($(EVEREST_BUILD_TYPE), OFFICIAL)
+  ifeq ($(findstring $(EVEREST_BUILD), $(OFFICIAL_DEVICES)),)
+    # Shouldn't reach here, error for unexpected situation
+    $(error **********************************************************)
+    $(error *     A violation has been detected, aborting build      *)
+    $(error **********************************************************)
+  endif
+endif
+
 # Set all versions
 BUILD_DATE := $(shell date -u +%Y%m%d)
 BUILD_TIME := $(shell date -u +%H%M)
@@ -63,4 +93,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.everest.version=$(EVEREST_VERSION) \
     ro.modversion=$(EVEREST_VERSION) \
     ro.everestos.maintainer=$(EVEREST_MAINTAINER) \
-    ro.everest.edition=$(EVEREST_EDITION)
+    ro.everest.edition=$(EVEREST_EDITION) \
+    ro.everest.device=$(EVEREST_BUILD)
+
