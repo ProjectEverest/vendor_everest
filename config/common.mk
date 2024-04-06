@@ -130,6 +130,9 @@ PRODUCT_COPY_FILES += \
    $(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
 endif
 
+#ThemeIcons
+$(call inherit-product, packages/overlays/ThemeIcons/config.mk)
+
 # Themes OVerlay
 include packages/overlays/Themes/themes.mk
 
