@@ -127,6 +127,9 @@ PRODUCT_COPY_FILES += \
 # Include addons
 include vendor/addons/config.mk
 
+#ThemeIcons
+$(call inherit-product, packages/overlays/ThemeIcons/config.mk)
+
 # Include Everest Branding
 include vendor/everest/config/branding.mk
 
