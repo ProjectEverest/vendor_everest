@@ -110,7 +110,7 @@ KERNEL_MAKE_FLAGS :=
 # Add back threads, ninja cuts this to $(getconf _NPROCESSORS_ONLN)/2
 KERNEL_MAKE_FLAGS += -j$(shell getconf _NPROCESSORS_ONLN)
 
-TOOLS_PATH_OVERRIDE := \
+TOOLS_PATH_OVERRIDE += \
     PERL5LIB=$(BUILD_TOP)/prebuilts/tools-lineage/common/perl-base
 
 ifneq ($(KERNEL_NO_GCC), true)
