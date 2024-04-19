@@ -116,3 +116,7 @@ PRODUCT_PACKAGES += \
 # TouchGestures
 PRODUCT_PACKAGES += \
     TouchGestures
+
+# OmniJaws
+PRODUCT_PACKAGES += \
+    OmniJaws
