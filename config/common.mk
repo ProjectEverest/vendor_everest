@@ -62,10 +62,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
 endif
 
-# Gapps
+# Vanilla and GMS
 WITH_GAPPS ?= true
-ifeq ($(WITH_GAPPS),true)
+ifeq ($(WITH_GAPPS), true)
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+else
+include vendor/everest/config/vanilla.mk
 endif
 
 # Gboard side padding
