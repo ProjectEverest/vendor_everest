@@ -48,10 +48,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:$(TARGET_COPY_OUT_PRODUCT)/usr/keylayout/Vendor_045e_Product_0719.kl
 
-# Gapps
+# Vanilla and GMS
 WITH_GAPPS ?= true
-ifeq ($(WITH_GAPPS),true)
+ifeq ($(WITH_GAPPS), true)
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+else
+include vendor/everest/config/vanilla.mk
 endif
 
 # Gboard side padding
