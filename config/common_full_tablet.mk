@@ -17,8 +17,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 $(call inherit-product, vendor/lineage/config/telephony.mk)
 
-# GAPPS
+# Vanilla and GAPPS
 WITH_GAPPS ?= true
 ifeq ($(WITH_GAPPS), true)
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+else
+include vendor/lineage/config/vanilla.mk
 endif
