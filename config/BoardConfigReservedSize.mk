@@ -11,7 +11,7 @@ endif
         ifeq ($(PRODUCT_IS_ATV),true)
             BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE ?= 450000000
         else
-            BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE ?= 1188036608
+            BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE ?= 838036608
         endif
     else
         ifeq ($(PRODUCT_IS_ATV),true)
