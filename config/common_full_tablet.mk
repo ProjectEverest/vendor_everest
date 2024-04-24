@@ -16,3 +16,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.settings.large_screen_opt.enabled=true
 
 $(call inherit-product, vendor/lineage/config/telephony.mk)
+
+# GAPPS
+WITH_GAPPS ?= true
+ifeq ($(WITH_GAPPS), true)
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+endif
