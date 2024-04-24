@@ -2,6 +2,13 @@ PRODUCT_BRAND ?= EverestOS
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
+# Pixel additions
+$(call inherit-product, vendor/pixel-framework/config.mk)
+
+ifeq ($(WITH_GAPPS),true)
+$(call inherit-product, vendor/pixel-style/config/common.mk)
+endif
+
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=android-google
@@ -126,7 +133,6 @@ PRODUCT_COPY_FILES += \
 
 # Config
 PRODUCT_PACKAGES += \
-    SimpleDeviceConfig \
     SimpleSettingsConfig
 
 # Extra tools in Lineage
