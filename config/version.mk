@@ -13,8 +13,8 @@
 # limitations under the License.
 
 # Versioning System
-EVEREST_CODENAME := Khumbu
-EVEREST_NUM_VER := 1.1
+EVEREST_CODENAME := Gokyo
+EVEREST_NUM_VER := 1.2
 
 TARGET_PRODUCT_SHORT := $(subst everest_,,$(EVEREST_BUILD_TYPE))
 
