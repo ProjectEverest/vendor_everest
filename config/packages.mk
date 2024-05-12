@@ -120,3 +120,13 @@ PRODUCT_PACKAGES += \
 # OmniJaws
 PRODUCT_PACKAGES += \
     OmniJaws
+
+# Launcher3
+TARGET_INCLUDE_PIXEL_LAUNCHER ?= true
+ifeq ($(TARGET_INCLUDE_PIXEL_LAUNCHER),false)
+PRODUCT_PACKAGES += \
+    Launcher3QuickStep
+
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Launcher3QuickStep
+endif
