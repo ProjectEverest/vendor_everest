@@ -13,8 +13,8 @@
 # limitations under the License.
 
 # Versioning System
-EVEREST_CODENAME := Gokyo
-EVEREST_NUM_VER := 1.2
+EVEREST_CODENAME := Tenzing
+EVEREST_NUM_VER := 1.3
 
 TARGET_PRODUCT_SHORT := $(subst everest_,,$(EVEREST_BUILD_TYPE))
 
