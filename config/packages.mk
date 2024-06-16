@@ -14,7 +14,8 @@
 
 # Everest packages
 PRODUCT_PACKAGES += \
-    EverestWallpaperStub
+    EverestWallpaperStub \
+    Glimpse
 
 # Extra tools in Everest
 PRODUCT_PACKAGES += \
