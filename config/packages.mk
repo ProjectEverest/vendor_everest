@@ -15,6 +15,7 @@
 # Everest packages
 PRODUCT_PACKAGES += \
     EverestWallpaperStub \
+    Glimpse \
     OmniStyle
 
 # Face Unlock
