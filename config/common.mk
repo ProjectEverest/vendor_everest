@@ -269,6 +269,9 @@ include vendor/lineage/config/version.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
+# Bootanimation
+include vendor/lineage/config/bootanimation.mk
+
 # EverestOS
 $(call inherit-product, vendor/lineage/config/everest.mk)
 include packages/overlays/Themes/themes.mk
