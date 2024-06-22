@@ -131,3 +131,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Launcher3QuickStep
 endif
+
+# PocketMode
+TARGET_INCLUDES_POCKET_MODE ?= true
+ifeq ($(TARGET_INCLUDES_POCKET_MODE),true)
+PRODUCT_PACKAGES += \
+    PocketMode
+
+PRODUCT_COPY_FILES += \
+    packages/apps/PocketMode/privapp-permissions-pocketmode.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-pocketmode.xml
+endif
