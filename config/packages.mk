@@ -126,11 +126,18 @@ PRODUCT_PACKAGES += \
 # Launcher3
 TARGET_INCLUDE_PIXEL_LAUNCHER ?= true
 ifeq ($(TARGET_INCLUDE_PIXEL_LAUNCHER),false)
+ifeq ($(TARGET_INCLUDE_LAUNCHER3),true)
 PRODUCT_PACKAGES += \
     Launcher3QuickStep
 
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Launcher3QuickStep
+else
+ifneq ($(TARGET_INCLUDE_LAWNCHAIR), true)
+PRODUCT_COPY_FILES += \
+   $(call inherit-product-if-exists, vendor/extra/product.mk)
+endif
+endif
 endif
 
 # PocketMode
