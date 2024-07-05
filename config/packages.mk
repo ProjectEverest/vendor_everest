@@ -133,10 +133,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Launcher3QuickStep
 else
-ifneq ($(TARGET_INCLUDE_LAWNCHAIR), true)
 PRODUCT_COPY_FILES += \
    $(call inherit-product-if-exists, vendor/extra/product.mk)
-endif
 endif
 endif
 
