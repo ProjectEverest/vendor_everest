@@ -123,6 +123,13 @@
         <item>app_cloning/delete_all_app_clones_enabled=true</item>
         <item>app_cloning/enable_app_cloning_building_blocks=true</item>
 
+        <!-- ART heap compaction for cached apps -->
+        <item>activity_manager/use_compaction=true</item>
+
+        <!-- Enable app aspect ratio -->
+        <item>window_manager/enable_app_compat_aspect_ratio_user_settings=true</item>
+        <item>window_manager/enable_app_compat_user_aspect_ratio_fullscreen=true</item>
+
         <!-- Enable new location indicators -->
         <item>privacy/location_access_check_enabled=true</item>
         <item>privacy/location_accuracy_enabled=true</item>
@@ -133,6 +140,9 @@
 
         <!-- Enable safety center -->
         <item>privacy/safety_center_is_enabled=true</item>
+
+        <!-- Enable shared connectivity -->
+        <item>wifi/shared_connectivity_enabled=true</item>
 
         <!-- Don't pin camera app to save memory -->
         <item>runtime_native_boot/pin_camera=false</item>
@@ -149,7 +159,7 @@
 
         <!-- Adaptive Sound (Pixel 2020) -->
         <item>device_personalization_services/AdaptiveAudio__enable_adaptive_audio=true</item>
-        <item>device_personalization_services/AdaptiveAudio__show_promo_notification=false</item>
+        <item>device_personalization_services/AdaptiveAudio__show_promo_notification=true</item>
         <item>device_personalization_services/AdaptiveAudio__use_silence_detector_state_bug_fix=true</item>
 
         <!-- Live Caption (Pixel 2017 + OEM) -->
@@ -165,6 +175,8 @@
         <item>device_personalization_services/Captions__allow_use_public_speech_recognition=true</item>
 
         <!-- Smartspace -->
+        <item>device_personalization_services/Cell__enable_cell=true</item>
+        <item>device_personalization_services/Cell__enable_smartspace_events=true</item>
         <item>device_personalization_services/Echo__smartspace_dedupe_fast_pair_notification=true</item>
         <item>device_personalization_services/Echo__smartspace_doorbell_aiai_loading_screen=true</item>
         <item>device_personalization_services/Echo__smartspace_doorbell_loading_screen_state=2</item>
@@ -186,6 +198,8 @@
         <item>device_personalization_services/Echo__smartspace_enable_eta_lyft=true</item>
         <item>device_personalization_services/Echo__smartspace_enable_food_delivery_eta=true</item>
         <item>device_personalization_services/Echo__smartspace_enable_grocery=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_light_off_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_light_predictor=false</item>
         <item>device_personalization_services/Echo__smartspace_enable_media_wake_lock_acquire=true</item>
         <item>device_personalization_services/Echo__smartspace_enable_nap=true</item>
         <item>device_personalization_services/Echo__smartspace_enable_nudge=true</item>
@@ -201,14 +215,21 @@
         <item>device_personalization_services/Echo__smartspace_enable_step_predictor=true</item>
         <item>device_personalization_services/Echo__smartspace_enable_subcard_logging=true</item>
         <item>device_personalization_services/Echo__smartspace_gaia_twiddler=true</item>
+        <item>device_personalization_services/Echo__smartspace_outlook_event_source_of_truth=TEXT_ONLY</item>
+        <item>device_personalization_services/Echo__smartspace_package_delivery_card_delay_seconds=0</item>
         <item>device_personalization_services/Echo__smartspace_show_cross_device_timer_label=true</item>
         <item>device_personalization_services/Echo__smartspace_use_flashlight_action_chip=true</item>
         <item>device_personalization_services/Echo_smartspace__enable_flight_landing_smartspace_aiai=true</item>
         <item>device_personalization_services/Echo_smartspace__enable_hotel_smartspace_aiai=true</item>
         <item>device_personalization_services/Echo_smartspace__smartspace_enable_daily_forecast=true</item>
         <item>device_personalization_services/Echo_smartspace__smartspace_enable_timely_reminder=true</item>
+        <item>device_personalization_services/EchoSmartspace__check_notification_visibility=true</item>
+        <item>device_personalization_services/EchoSmartspace__doorbell_when_for_update_time=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_add_contextual_feedback_button_on_long_press=false</item>
+        <item>device_personalization_services/EchoSmartspace__enable_add_internal_feedback_button=true</item>
         <item>device_personalization_services/EchoSmartspace__enable_agsa_settings_read=true</item>
         <item>device_personalization_services/EchoSmartspace__enable_cross_feature_rank_dedup_twiddler=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_dimensional_logging=false</item>
         <item>device_personalization_services/EchoSmartspace__enable_encode_subcard_into_smartspace_target_id=true</item>
         <item>device_personalization_services/EchoSmartspace__enable_fitbit_notifications=true</item>
         <item>device_personalization_services/EchoSmartspace__enable_flight_landing_smartspace_aiai=true</item>
@@ -217,8 +238,14 @@
         <item>device_personalization_services/EchoSmartspace__enable_optin_bedtime_adjustment_provider=true</item>
         <item>device_personalization_services/EchoSmartspace__enable_predictor_expiration=true</item>
         <item>device_personalization_services/EchoSmartspace__enable_ring_channels_regex=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_ring_using_ui_template=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_travel_features_type_merge=true</item>
         <item>device_personalization_services/EchoSmartspace__enable_weather_data_extras=true</item>
+        <item>device_personalization_services/EchoSmartspace__ring_channels_regex=4_ding_channel_notification\d+</item>
+        <item>device_personalization_services/EchoSmartspace__ring_lockscreen_delay_seconds=0</item>
+        <item>device_personalization_services/EchoSmartspace__ring_on_aod_only=true</item>
         <item>device_personalization_services/EchoSmartspace__runtastic_check_pause_action=true</item>
+        <item>device_personalization_services/EchoSmartspace__runtastic_is_ongoing_default_true=true</item>
         <item>device_personalization_services/EchoSmartspace__smartspace_enable_cross_device_alarm=true</item>
         <item>device_personalization_services/EchoSmartspace__smartspace_enable_daily_forecast=true</item>
         <item>device_personalization_services/EchoSmartspace__smartspace_enable_timely_reminder=true</item>
@@ -303,33 +330,42 @@
         <item>device_personalization_services/SmartDictation__enable_selection_filtering=true</item>
 
         <!-- Pixel Launcher -->
+        <item>launcher/enable_keyboard_transition_sync=true</item>
         <item>launcher/ENABLE_LOCAL_RECOMMENDED_WIDGETS_FILTER=true</item>
-        <item>launcher/ENABLE_SMARTSPACE_ENHANCED=true</item>
-        <item>launcher/ENABLE_WIDGETS_PICKER_AIAI_SEARCH=true</item>
-        <item>launcher/ENABLE_QUICK_LAUNCH_V2=true</item>
-        <item>launcher/GBOARD_UPDATE_ENTER_KEY=true</item>
-        <item>launcher/enable_one_search=true</item>
-        <item>launcher/enable_quick_launch_v2=true</item>
-        <item>launcher/long_press_home_button_to_search=true</item>
-        <item>launcher/long_press_home_button_to_search_mpr=true</item>
-        <item>launcher/press_hold_nav_handle_to_search=true</item>
-        <item>launcher/press_hold_nav_handle_to_search_mpr=true</item>
         <item>launcher/ENABLE_LONG_PRESS_NAV_HANDLE=true</item>
         <item>launcher/ENABLE_LONG_PRESS_NAV_HANDLE_MPR=true</item>
+        <item>launcher/enable_one_search=true</item>
+        <item>launcher/ENABLE_QUICK_LAUNCH_V2=true</item>
+        <item>launcher/enable_quick_launch_v2=true</item>
+        <item>launcher/enable_quick_search=true</item>
+        <item>launcher/enable_rich_answer=true</item>
+        <item>launcher/ENABLE_SEARCH_HAPTIC_HINT=true</item>
         <item>launcher/ENABLE_SETTINGS_OSE_CUSTOMIZATIONS=true</item>
+        <item>launcher/ENABLE_SMARTSPACE_ENHANCED=true</item>
+        <item>launcher/enable_web_suggest_on_default_browser=true</item>
+        <item>launcher/ENABLE_WIDGETS_PICKER_AIAI_SEARCH=true</item>
+        <item>launcher/GBOARD_UPDATE_ENTER_KEY=true</item>
         <item>launcher/INVOKE_OMNI_LPH=true</item>
         <item>launcher/INVOKE_OMNI_LPH_MPR=true</item>
+        <item>launcher/long_press_home_button_to_search=true</item>
+        <item>launcher/long_press_home_button_to_search_mpr=true</item>
         <item>launcher/LPNH_SLOP_PERCENTAGE=71</item>
         <item>launcher/LPNH_TIMEOUT_MS=400</item>
+        <item>launcher/press_hold_nav_handle_to_search=true</item>
+        <item>launcher/press_hold_nav_handle_to_search_mpr=true</item>
+        <item>launcher/show_search_educard_qsb=true</item>
+        <item>launcher/show_three_dot_menu_qsb=true</item>
+        <item>launcher/use_app_search_for_web=true</item>
+        <item>launcher/use_fallback_app_search=true</item>
 
         <!-- Pixel Launcher (Recents) -->
         <item>device_personalization_services/Overview__enable_barcode_detection=false</item>
         <item>device_personalization_services/Overview__enable_image_search=false</item>
+        <item>device_personalization_services/Overview__enable_image_selection=true</item>
+        <item>device_personalization_services/Overview__enable_japanese_ocr=true</item>
         <item>device_personalization_services/Overview__enable_lens_r_overview_long_press=true</item>
         <item>device_personalization_services/Overview__enable_lens_r_overview_select_mode=true</item>
         <item>device_personalization_services/Overview__enable_lens_r_overview_translate_action=true</item>
-        <item>device_personalization_services/Overview__enable_image_selection=true</item>
-        <item>device_personalization_services/Overview__enable_japanese_ocr=true</item>
         <item>device_personalization_services/Overview__enable_overview=true</item>
         <item>device_personalization_services/Overview__enable_pir_clearcut_logging=true</item>
         <item>device_personalization_services/Overview__enable_pir_westworld_logging=true</item>
@@ -342,6 +378,7 @@
         <item>systemui/enable_screenshot_corner_flow=true</item>
         <item>systemui/enable_screenshot_notification_smart_actions=true</item>
         <item>systemui/enable_screenshot_scrolling=true</item>
+        <item>systemui/tap_to_edit=true</item>
 
         <!-- Privacy -->
         <item>privacy/discrete_history_cutoff_millis=604800000</item>
