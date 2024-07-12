@@ -271,6 +271,13 @@ PRODUCT_PACKAGES += \
     DocumentsUIOverlay \
     NetworkStackOverlay
 
+# Transparent recents in pixel launcher
+TARGET_USES_BLUR_RECENT ?= true
+ifeq ($(TARGET_USES_BLUR_RECENT), true)
+PRODUCT_PACKAGES += \
+    PixelLauncherOverlayBlur
+endif
+
 # GameSpace
 PRODUCT_PACKAGES += \
     GameSpace
