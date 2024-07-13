@@ -248,6 +248,10 @@ PRODUCT_PACKAGES += \
     DocumentsUIOverlay \
     NetworkStackOverlay
 
+# GameSpace
+PRODUCT_PACKAGES += \
+    GameSpace
+
 # Translations
 CUSTOM_LOCALES += \
     ast_ES \
