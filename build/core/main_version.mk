@@ -11,7 +11,8 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.everest.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
     ro.modversion=$(EVEREST_VERSION) \
     ro.everest.base.codename=$(EVEREST_CODENAME) \
-    ro.everest.buildtype=$(EVEREST_BUILD_TYPE)
+    ro.everest.buildtype=$(EVEREST_BUILD_TYPE) \
+    ro.everest.edition=$(EVEREST_EDITION)
 
 # LineageOS Platform SDK Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
