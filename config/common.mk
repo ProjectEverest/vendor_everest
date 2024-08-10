@@ -252,6 +252,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GameSpace
 
+#Omni
+PRODUCT_PACKAGES += \
+    OmniJaws \
+    OmniStyle
+
+
 # Translations
 CUSTOM_LOCALES += \
     ast_ES \
