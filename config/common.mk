@@ -38,6 +38,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
 endif
 
+# Launchers config
 TARGET_DEFAULT_PIXEL_LAUNCHER ?= true
 ifeq ($(TARGET_DEFAULT_PIXEL_LAUNCHER), true)
 # Pixel Launcher
@@ -50,6 +51,10 @@ PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.default_launcher=0 \
     persist.sys.quickswitch_pixel_shipped=0
 endif
+
+# Launcher3
+PRODUCT_PACKAGES += \
+    Launcher3QuickStep
 
 # Launchers overlay
 PRODUCT_PACKAGES += \
