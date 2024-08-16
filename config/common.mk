@@ -308,4 +308,5 @@ include vendor/lineage/config/bootanimation.mk
 
 # EverestOS
 $(call inherit-product, vendor/lineage/config/everest.mk)
+$(call inherit-product, vendor/extra/product.mk)
 include packages/overlays/Themes/themes.mk
