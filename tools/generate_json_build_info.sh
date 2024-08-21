@@ -20,10 +20,12 @@ if [ "$1" ]; then
             id=$(sha256sum $file_path | awk '{ print $1 }');
             build_type=$(grep ro\.everest\.buildtype ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
             base_version=$(grep ro\.modversion ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
+            maintainer=$(grep ro\.everestos\.maintainer ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
             link="https://sourceforge.net/projects/everestos-releases/files/${DEVICE}/${file_name}/download"
             echo "{" > $file_path.json
             echo "  \"response\": [" >> $file_path.json
             echo "    {" >> $file_path.json
+            echo "      \"maintainer\": ${maintainer}," >> $file_path.json
             echo "      \"datetime\": ${datetime}," >> $file_path.json
             echo "      \"size\": ${file_size}," >> $file_path.json
             echo "      \"filehash\": \"${md5}\"," >> $file_path.json
