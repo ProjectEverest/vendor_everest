@@ -1,5 +1,5 @@
 # GMS
-ifeq ($(WITH_GAPSS),true)
+ifeq ($(WITH_GAPPS),true)
 WITH_GMS_COMMS_SUITE := true
 endif
 
